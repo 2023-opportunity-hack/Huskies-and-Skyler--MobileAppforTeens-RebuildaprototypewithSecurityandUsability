@@ -14,7 +14,6 @@ class BottomNavigationBarExampleApp extends StatelessWidget {
     );
   }
 }
-///d
 class BottomNavigationBarExample extends StatefulWidget {
   const BottomNavigationBarExample({super.key});
 
@@ -64,6 +63,7 @@ class _BottomNavigationBarExampleState
           '/home': (context) => const Home(),
           '/map': (context) => const Map()
         }
+
     )
 
   }
