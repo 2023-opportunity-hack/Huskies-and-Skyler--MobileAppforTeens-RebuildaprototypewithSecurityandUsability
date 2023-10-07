@@ -64,7 +64,7 @@ class _BottomNavigationBarExampleState
           '/map': (context) => const Map()
         }
 
-    )
+    );
 
   }
 }

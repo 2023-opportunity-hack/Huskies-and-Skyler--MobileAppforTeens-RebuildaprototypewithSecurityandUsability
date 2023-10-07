@@ -6,11 +6,26 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppBar.getAppBar(),
-      bottomNavigationBar: CommonFooterMenu(context).getFooterMenu(0),
-      body: Center{
-        child: const Text('hello')
-    }
-    )
+      appBar: AppBar(
+        title: Text("CAP"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Contact a Professional',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 30.0,
+                fontFamily: "Tahoma",
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
+      ),
+    ); // This trailing comma makes auto-formatting nicer for build methods.
   }
+
 }
