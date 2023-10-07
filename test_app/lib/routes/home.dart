@@ -1,31 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
+import 'dart:ui';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/utils.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
-
+class Scene extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("CAP"),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Contact a Professional',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 30.0,
-                fontFamily: "Tahoma",
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
+    double baseWidth = 390;
+    double fem = MediaQuery.of(context).size.width / baseWidth;
+    double ffem = fem * 0.97;
+    return Container(
+      width: double.infinity,
+      child: Container(
+        // contactaprofessionalHcB (4:406)
+        width: double.infinity,
+        height: 844*fem,
+        decoration: BoxDecoration (
+          color: Color(0xffffffff),
         ),
       ),
-    ); // This trailing comma makes auto-formatting nicer for build methods.
+    );
   }
-
 }

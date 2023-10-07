@@ -28,7 +28,6 @@ class _BottomNavigationBarExampleState
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Color(0xff420C5C));
 
-  //LIST OF PAGES
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Index 0: Home',
@@ -54,7 +53,6 @@ class _BottomNavigationBarExampleState
     });
   }
 
-  //LIST OF ICONS + LABELS
   @override
   Widget build(BuildContext context){
     return MaterialApp(
@@ -63,6 +61,7 @@ class _BottomNavigationBarExampleState
           '/home': (context) => const Home(),
           '/map': (context) => const Map()
         }
+    }
 
     );
 
