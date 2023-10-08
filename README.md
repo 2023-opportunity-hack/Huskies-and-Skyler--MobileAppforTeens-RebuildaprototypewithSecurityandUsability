@@ -1,9 +1,8 @@
 
 # 2023_fall Hackathon
 https://hack.ohack.dev
-## Team
-Huskies and Skyler
-
+## Our Team: Huskies and Skyler 
+Welcome! We are 4 college students from Washington State. Our team name was inspired by the fact that most of our team members attend the University of Washington, whose mascot is a husky, while Skyler goes to a different university. 
 ## Slack Channel
 `#`[huskies-and-skyler](https://opportunity-hack.slack.com/app_redirect?channel=huskies-and-skyler)
 
