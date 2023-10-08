@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:test_app/tictactoe.dart';
 import 'package:test_app/Firstpage.dart';
 import 'package:test_app/Secondpage.dart';
+import 'package:test_app/home_temp.dart';
+
 
 
 void main() {
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/first': (context) => Firstpage(),
         '/second': (context) => Secondpage(),
         '/tictactoe': (context) => Tictactoe(),
+        '/home_temp': (context) => Hometemp(),
       },
       title: 'main page for safespace',
       theme: ThemeData(

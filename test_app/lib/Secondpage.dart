@@ -39,7 +39,7 @@ class _SecondpageState extends State<Secondpage> {
                   horizontal: 25.0, // Adjust horizontal padding as needed
                   vertical: 10.0,   // Adjust vertical padding as needed
                 ),
-                  backgroundColor: Colors.red,
+                  backgroundColor: Colors.tealAccent,
                 ),
                 child: Text(
                   "Tic Tac Toe",

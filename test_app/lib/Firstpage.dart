@@ -37,7 +37,7 @@ class _FirstpageState extends State<Firstpage> {
                   horizontal: 25.0, // Adjust horizontal padding as needed
                   vertical: 10.0,   // Adjust vertical padding as needed
                 ),
-                  backgroundColor: Colors.red,
+                  backgroundColor: Colors.tealAccent,
                 ),
                 child: Text(
                   "Second Screen",
@@ -55,3 +55,4 @@ class _FirstpageState extends State<Firstpage> {
     ); // This trailing comma makes auto-formatting nicer for build methods.
   }
 }
+

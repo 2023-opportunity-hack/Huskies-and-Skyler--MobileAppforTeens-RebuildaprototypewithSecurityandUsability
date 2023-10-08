@@ -1,166 +1,207 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/ui_theme/color.dart';
-import 'package:test_app/util/game_logic.dart';
+import 'package:test_app/home_temp.dart';
+import 'package:flutter/services.dart';
+import 'package:test_app/utils.dart';
 
 
 
 
-void main() {
-  runApp(const Tictactoe());
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
+  runApp(Tictactoe());
 }
 
 class Tictactoe extends StatelessWidget {
-  const Tictactoe({Key? key}) : super(key: key);
+  static final String title = 'Tic Tac Toe';
+
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: GameScreen(),
-    );
-  }
+  Widget build(BuildContext context) => MaterialApp(
+    debugShowCheckedModeBanner: false,
+    routes: {
+      '/home_temp': (context) => Hometemp(),
+    },
+    title: title,
+    theme: ThemeData(
+      primaryColor: Colors.blue,
+    ),
+    home: MainPage(title: title),
+  );
 }
 
-class GameScreen extends StatefulWidget {
-  const GameScreen({Key? key}) : super(key: key);
+class MainPage extends StatefulWidget {
+  final String title;
+
+  const MainPage({
+    required this.title,
+  });
 
   @override
-  _GameScreenState createState() => _GameScreenState();
+  _MainPageState createState() => _MainPageState();
 }
 
-class _GameScreenState extends State<GameScreen> {
-  //adding the necessary variables
-  String lastValue = "X";
-  bool gameOver = false;
-  int turn = 0; // to check the draw
-  String result = "";
-  List<int> scoreboard = [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-  ]; //the score are for the different combination of the game [Row1,2,3, Col1,2,3, Diagonal1,2];
-  //let's declare a new Game components
+class Player {
+  static const none = '';
+  static const X = 'X';
+  static const O = 'O';
+}
 
-  Game game = Game();
+class _MainPageState extends State<MainPage> {
+  static final countMatrix = 3;
+  static final double size = 92;
 
-  //let's initi the GameBoard
+  String lastMove = Player.none;
+  late List<List<String>> matrix;
+
+  var count=0;
+  var count0=0;
+
   @override
   void initState() {
     super.initState();
-    game.board = Game.initGameBoard();
-    print(game.board);
+
+    setEmptyFields();
+  }
+
+  void setEmptyFields() => setState(() => matrix = List.generate(
+    countMatrix,
+        (_) => List.generate(countMatrix, (_) => Player.none),
+  ));
+
+  Color getBackgroundColor() {
+    final thisMove = lastMove == Player.X ? Player.O : Player.X;
+
+    return getFieldColor(thisMove).withAlpha(150);
   }
 
   @override
-  Widget build(BuildContext context) {
-    double boardWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-        backgroundColor: MainColor.primaryColor,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              "It's ${lastValue} turn".toUpperCase(),
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 58,
-              ),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            //now we will make the game board
-            //but first we will create a Game class that will contains all the data and method that we will need
-            Container(
-              width: boardWidth,
-              height: boardWidth,
-              child: GridView.count(
-                crossAxisCount: Game.boardlenth ~/
-                    3, // the ~/ operator allows you to evide to integer and return an Int as a result
-                padding: EdgeInsets.all(16.0),
-                mainAxisSpacing: 8.0,
-                crossAxisSpacing: 8.0,
-                children: List.generate(Game.boardlenth, (index) {
-                  return InkWell(
-                    onTap: gameOver
-                        ? null
-                        : () {
-                      //when we click we need to add the new value to the board and refresh the screen
-                      //we need also to toggle the player
-                      //now we need to apply the click only if the field is empty
+  Widget build(BuildContext context) => Scaffold(
+    backgroundColor: getBackgroundColor(),
+    appBar: AppBar(
+      title: Text(widget.title),
+    ),
+    body: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: Utils.modelBuilder(matrix, (x, value) => buildRow(x)),
+    ),
+  );
 
-                      if (game.board![index] == "") {
-                        setState(() {
-                          game.board![index] = lastValue;
-                          turn++;
-                          gameOver = game.winnerCheck(
-                              lastValue, index, scoreboard, 3);
+  Widget buildRow(int x) {
+    final values = matrix[x];
 
-                          if (gameOver) {
-                            result = "$lastValue is the Winner";
-                          } else if (!gameOver && turn == 9) {
-                            result = "It's a Draw!";
-                            gameOver = true;
-                          }
-                          if (lastValue == "X")
-                            lastValue = "O";
-                          else
-                            lastValue = "X";
-                        });
-                      }
-                    },
-                    child: Container(
-                      width: Game.blocSize,
-                      height: Game.blocSize,
-                      decoration: BoxDecoration(
-                        color: MainColor.secondaryColor,
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: Center(
-                        child: Text(
-                          game.board![index],
-                          style: TextStyle(
-                            color: game.board![index] == "X"
-                                ? Colors.blue
-                                : Colors.pink,
-                            fontSize: 64.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                  );
-                }),
-              ),
-            ),
-            SizedBox(
-              height: 25.0,
-            ),
-            Text(
-              result,
-              style: TextStyle(color: Colors.white, fontSize: 54.0),
-            ),
-            ElevatedButton.icon(
-              onPressed: () {
-                setState(() {
-                  //erase the board
-                  game.board = Game.initGameBoard();
-                  lastValue = "X";
-                  gameOver = false;
-                  turn = 0;
-                  result = "";
-                  scoreboard = [0, 0, 0, 0, 0, 0, 0, 0];
-                });
-              },
-              icon: Icon(Icons.replay),
-              label: Text("Repeat the Game"),
-            ),
-          ],
-        ));
-    //the first step is organise our project folder structure
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: Utils.modelBuilder(
+        values,
+            (y, value) => buildField(x, y),
+      ),
+    );
   }
+
+  Color getFieldColor(String value) {
+    switch (value) {
+      case Player.O:
+        return Colors.blue;
+      case Player.X:
+        return Colors.red;
+      default:
+        return Colors.white;
+    }
+  }
+
+  Widget buildField(int x, int y) {
+    final value = matrix[x][y];
+    final color = getFieldColor(value);
+
+    return Container(
+      margin: EdgeInsets.all(4),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          minimumSize: Size(size, size), backgroundColor: color,
+        ),
+        child: Text(value, style: TextStyle(fontSize: 32)),
+        onPressed: () => selectField(value, x, y),
+      ),
+    );
+  }
+
+  void selectField(String value, int x, int y) {
+    if (value == Player.none) {
+      final newValue = lastMove == Player.X ? Player.O : Player.X;
+
+      setState(() {
+        lastMove = newValue;
+        matrix[x][y] = newValue;
+      });
+
+      if (isWinner(x, y)) {
+        showEndDialog('Player $newValue Won');
+      } else if (isEnd()) {
+        showEndDialog('Undecided Game');
+      }
+    }
+
+    //triple tap checker
+    if (value == Player.X) {
+      count++;
+      if (count==3) {
+        count=0;
+        count0=0;
+        Navigator.pushNamed(context, '/home_temp');
+      }
+    }
+    if (value == Player.O) {
+      count0++;
+      if (count0==3) {
+        count=0;
+        count0=0;
+        Navigator.pushNamed(context, '/home_temp');
+      }
+    }
+  }
+
+  bool isEnd() =>
+      matrix.every((values) => values.every((value) => value != Player.none));
+
+  /// Check out logic here: https://stackoverflow.com/a/1058804
+  bool isWinner(int x, int y) {
+    var col = 0, row = 0, diag = 0, rdiag = 0;
+    final player = matrix[x][y];
+    final n = countMatrix;
+
+    for (int i = 0; i < n; i++) {
+      if (matrix[x][i] == player) col++;
+      if (matrix[i][y] == player) row++;
+      if (matrix[i][i] == player) diag++;
+      if (matrix[i][n - i - 1] == player) rdiag++;
+    }
+
+    return row == n || col == n || diag == n || rdiag == n;
+  }
+
+  Future showEndDialog(String title) => showDialog(
+    context: context,
+    barrierDismissible: false,
+    builder: (context) => AlertDialog(
+      title: Text(title),
+      content: Text('Press to Restart the Game'),
+      actions: [
+        ElevatedButton(
+          onPressed: () {
+            count=0;
+            count0=0;
+            setEmptyFields();
+            Navigator.of(context).pop();
+          },
+          child: Text('Restart'),
+        )
+      ],
+    ),
+  );
+
 }

@@ -5,7 +5,7 @@ class Player {
 }
 
 class Game {
-  static const boardlenth = 9; // we will creare a board of 3*3 blocks;
+  static const boardlenth = 9; // we will create a board of 3*3 blocks;
   static const blocSize = 100.0;
 
   //Creating the empty board
