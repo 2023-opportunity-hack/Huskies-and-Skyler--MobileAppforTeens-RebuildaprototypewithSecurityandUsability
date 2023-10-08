@@ -1,30 +1,22 @@
+Inspiration
+We discovered SafeSpace, a nonprofit dedicated to helping young girls feel safer in a world filled with threats of sexual abuse and trauma. Their initiatives resonated with us, as we were all too familiar with stories of those around us feeling unsupported and lost following a traumatic event. By creating a demo app for SafeSpace, we can help girls find resources, professional support, and self-help, creating a future filled with empowered women.
 
-# 2023_fall Hackathon
-https://hack.ohack.dev
-## Our Team: Huskies and Skyler 
-Welcome! We are 4 college students from Washington State. Our team name was inspired by the fact that most of our team members attend the University of Washington, whose mascot is a husky, while Skyler goes to a different university. 
-## Slack Channel
-`#`[huskies-and-skyler](https://opportunity-hack.slack.com/app_redirect?channel=huskies-and-skyler)
+What it does
+Our app has the following features:
 
-## Problem Statement
-[Mobile App for Teens: Rebuild a prototype with Security and Usability](https://ohack.dev/project/e8y7sIQC7j2lT1YdGMmf)
+SECURITY: Our login page is disguised as a tic-tac-toe game. This provides an extra layer of security, as only users familiar with the app know how to bypass the game and access personal information
+PROFESSIONAL SUPPORT: We have buttons meant to redirect users to professionals available to provide advice on anything they're going through
+MAP: In the future, we can link our map page to an API containing data with nearby women's shelters
+SELF CARE: We have numerous resources that our users can explore on their own, including gratitude journals, mood trackers, and mental health videos
+REPORTING ABUSE: Our app provides a space for users to document any abuse they have faced, add supporting documents like pictures and videos, as well as text entries detailing what happened
+How we built it
+Our team collaborated primarily through Github and Android Studio. Some of our members started off with creating the design and UI of our app, using Figma. We kept our nonprofit's original color scheme, theme, and main components, while changing the layout and routing of the app to be more efficient for users. Others began learning to use Dart and Flutter, later turning our Figma designs into code.
 
-## Creator
-@Matthew Polasub (on Slack)
+Challenges we ran into
+Our team was very new to Dart, Flutter, and Figma (we started learning the day before submitting the app). Thus, we spent a good amount of time getting familiar with the framework of the language and often had to step back and debug things. Furthermore, Github posed some problems for us as initially, we were unable to merge our changes together! It took a while for us to figure things out, consulting other mentors along the way. Luckily, we were able to share our work after a fair bit of debugging. The entire project was a rollercoaster, with some moments feeling lost and hopeless, and others filled with excitement and triumph as
 
-## Your next steps
-1. ✅ Add everyone to your GitHub repo like this: https://opportunity-hack.slack.com/archives/C1Q6YHXQU/p1605657678139600
-2. ✅ Create your DevPost project like this https://youtu.be/vCa7QFFthfU?si=bzMQ91d8j3ZkOD03
-3. ✅ ASU Students use https://opportunity-hack-2023-asu.devpost.com/
-4. ✅ Everyone else use https://opportunity-hack-2023-virtual.devpost.com/
-5. ✅ Your DevPost final submission demo video should be 3 minutes or less
-6. ✅ Review the judging criteria on DevPost
-
-# What should your final Readme look like?
-Examples of stellar readmes:
-- ✨ [2019 Team 3](https://github.com/2019-Arizona-Opportunity-Hack/Team-3)
-- ✨ [2019 Team 6](https://github.com/2019-Arizona-Opportunity-Hack/Team-6)
-- ✨ [2020 Team 2](https://github.com/2020-opportunity-hack/Team-02)
-- ✨ [2020 Team 4](https://github.com/2020-opportunity-hack/Team-04)
-- ✨ [2020 Team 8](https://github.com/2020-opportunity-hack/Team-08)
-- ✨ [2020 Team 12](https://github.com/2020-opportunity-hack/Team-12)
+Accomplishments that we're proud of
+Learning Flutter, Dart, and Figma in 30 hours!
+Making a nice looking app
+Getting Github to work
+Creating a good base to keep building off of
