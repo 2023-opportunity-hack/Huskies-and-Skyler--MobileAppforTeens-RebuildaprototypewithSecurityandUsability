@@ -6,7 +6,7 @@ import 'package:test_app/widgets/custom_drop_down.dart';
 class WarningSignsOneScreen extends StatelessWidget {
   WarningSignsOneScreen({Key? key}) : super(key: key);
 
-  List<String> dropdownItemList = ["HELLO"];
+  List<String> dropdownItemList = ["Explanation"];
 
   List<String> dropdownItemList1 = ["Item One", "Item Two", "Item Three"];
 
@@ -40,14 +40,7 @@ class WarningSignsOneScreen extends StatelessWidget {
                           EdgeInsets.symmetric(horizontal: 24.h, vertical: 5.v),
                       decoration: AppDecoration.fillWhiteA,
                       child: Row(children: [
-                        CustomImageView(
-                            svgPath: ImageConstant.imgArrowleft,
-                            height: 12.v,
-                            width: 6.h,
-                            margin: EdgeInsets.symmetric(vertical: 15.v),
-                            onTap: () {
-                              onTapImgArrowleftone(context);
-                            }),
+
                         Padding(
                             padding: EdgeInsets.only(left: 83.h, top: 11.v),
                             child: Text("Warning Signs",

@@ -3,17 +3,12 @@ import 'package:test_app/core/app_export.dart';
 import 'package:test_app/presentation/home_screen_page/home_screen_page.dart';
 import 'package:test_app/widgets/custom_bottom_bar.dart';
 
-class SafetyPlanScreen extends StatefulWidget {
+class SafetyPlanScreen extends StatelessWidget {
   SafetyPlanScreen({Key? key})
       : super(
           key: key,
         );
 
-  @override
-  State<SafetyPlanScreen> createState() => _SafetyPlanScreenState();
-}
-
-class _SafetyPlanScreenState extends State<SafetyPlanScreen> {
   GlobalKey<NavigatorState> navigatorKey = GlobalKey();
 
   @override
@@ -277,7 +272,7 @@ class _SafetyPlanScreenState extends State<SafetyPlanScreen> {
                                               .titleMediumPrimary,
                                         ),
                                         Spacer(
-                                          flex: 46,
+                                          flex: 50,
                                         ),
                                         Text(
                                           "School",
@@ -285,7 +280,7 @@ class _SafetyPlanScreenState extends State<SafetyPlanScreen> {
                                               .titleMediumPrimary,
                                         ),
                                         Spacer(
-                                          flex: 53,
+                                          flex: 50,
                                         ),
                                         Text(
                                           "Tech",
@@ -308,7 +303,7 @@ class _SafetyPlanScreenState extends State<SafetyPlanScreen> {
                                           width: 36.adaptSize,
                                         ),
                                         Spacer(
-                                          flex: 51,
+                                          flex: 50,
                                         ),
                                         CustomImageView(
                                           svgPath: ImageConstant.imgUser,
@@ -316,7 +311,7 @@ class _SafetyPlanScreenState extends State<SafetyPlanScreen> {
                                           width: 36.adaptSize,
                                         ),
                                         Spacer(
-                                          flex: 48,
+                                          flex: 50,
                                         ),
                                         CustomImageView(
                                           svgPath:
@@ -340,7 +335,7 @@ class _SafetyPlanScreenState extends State<SafetyPlanScreen> {
                                               .titleMediumPrimary_1,
                                         ),
                                         Spacer(
-                                          flex: 56,
+                                          flex: 50,
                                         ),
                                         Padding(
                                           padding: EdgeInsets.only(bottom: 2.v),
@@ -351,7 +346,7 @@ class _SafetyPlanScreenState extends State<SafetyPlanScreen> {
                                           ),
                                         ),
                                         Spacer(
-                                          flex: 43,
+                                          flex: 50,
                                         ),
                                         Padding(
                                           padding: EdgeInsets.only(top: 2.v),

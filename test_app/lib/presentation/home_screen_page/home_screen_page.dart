@@ -6,9 +6,8 @@ import 'package:test_app/presentation/warning_signs_one_screen/warning_signs_one
 import 'package:test_app/presentation/safety_plan_screen/safety_plan_screen.dart';
 import 'package:test_app/presentation/self_care_screen/self_care_screen.dart';
 import 'package:test_app/presentation/contact_a_professional_screen/contact_a_professional_screen.dart';
-import 'package:test_app/presentation/document_abuse_add_a_new_record_screen/document_abuse_add_a_new_record_screen.dart';
+import 'package:test_app/presentation/document_abuse_two_screen/document_abuse_two_screen.dart';
 import 'package:test_app/presentation/mood_tracker_screen/mood_tracker_screen.dart';
-
 
 
 class HomeScreenPage extends StatelessWidget {
@@ -80,35 +79,35 @@ class HomeScreenPage extends StatelessWidget {
                                                   onTap: () {
                                                     onTapSelfCare(context);
                                                   },
-                                                    child: Container(
-                                                        padding: EdgeInsets.symmetric(
-                                                            horizontal: 24.h,
-                                                            vertical: 11.v),
-                                                        decoration: AppDecoration
-                                                            .outlinePurple
-                                                            .copyWith(
-                                                                borderRadius:
-                                                                    BorderRadiusStyle
-                                                                        .roundedBorder8),
-                                                        child: Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize.min,
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            children: [
-                                                              CustomImageView(
-                                                                  svgPath:
-                                                                      ImageConstant
-                                                                          .imgCut,
-                                                                  height: 60.v,
-                                                                  width: 64.h),
-                                                              SizedBox(height: 13.v),
-                                                              Text("Self Care",
-                                                                  style: CustomTextStyles
-                                                                      .titleMediumOnErrorContainer),
-                                                              SizedBox(height: 2.v)
-                                                            ])))),
+                                                  child: Container(
+                                                      padding: EdgeInsets.symmetric(
+                                                          horizontal: 24.h,
+                                                          vertical: 11.v),
+                                                      decoration: AppDecoration
+                                                          .outlinePurple
+                                                          .copyWith(
+                                                          borderRadius:
+                                                          BorderRadiusStyle
+                                                              .roundedBorder8),
+                                                      child: Column(
+                                                          mainAxisSize:
+                                                          MainAxisSize.min,
+                                                          mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                          children: [
+                                                            CustomImageView(
+                                                                svgPath:
+                                                                ImageConstant
+                                                                    .imgCut,
+                                                                height: 60.v,
+                                                                width:70.h),
+                                                            SizedBox(height: 13.v),
+                                                            Text("Self Care",
+                                                                style: CustomTextStyles
+                                                                    .titleMediumOnErrorContainer),
+                                                            SizedBox(height: 2.v)
+                                                          ])))),
                                           Align(
                                               alignment: Alignment.topLeft,
                                               child: GestureDetector(
@@ -117,41 +116,43 @@ class HomeScreenPage extends StatelessWidget {
                                                   },
                                                   child: Container(
                                                       padding:
-                                                          EdgeInsets.symmetric(
-                                                              horizontal: 3.h,
-                                                              vertical: 5.v),
+                                                      EdgeInsets.symmetric(
+                                                          horizontal: 3.h,
+                                                          vertical: 5.v),
                                                       decoration: AppDecoration
                                                           .outlinePurple
                                                           .copyWith(
-                                                              borderRadius:
-                                                                  BorderRadiusStyle
-                                                                      .roundedBorder8),
+                                                          borderRadius:
+                                                          BorderRadiusStyle
+                                                              .roundedBorder8),
                                                       child: Column(
                                                           mainAxisSize:
-                                                              MainAxisSize.min,
+                                                          MainAxisSize.min,
                                                           crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
+                                                          CrossAxisAlignment
+                                                              .start,
                                                           children: [
                                                             CustomImageView(
                                                                 svgPath:
-                                                                    ImageConstant
-                                                                        .imgWarning,
+                                                                ImageConstant
+                                                                    .imgWarning,
                                                                 height: 69.v,
                                                                 width: 63.h,
                                                                 margin: EdgeInsets
                                                                     .only(
-                                                                        left: 21
-                                                                            .h)),
+                                                                    left: 25
+                                                                        .h)),
                                                             Padding(
                                                                 padding: EdgeInsets
                                                                     .only(
-                                                                        left:
-                                                                            1.h,
-                                                                        top: 12
-                                                                            .v,
-                                                                        bottom: 6
-                                                                            .v),
+                                                                    right:
+                                                                    3,
+                                                                    left:
+                                                                    12.h,
+                                                                    top: 12
+                                                                        .v,
+                                                                    bottom: 6
+                                                                        .v),
                                                                 child: Text(
                                                                     "Warning Signs",
                                                                     style: CustomTextStyles
@@ -170,21 +171,21 @@ class HomeScreenPage extends StatelessWidget {
                                                               .purple800,
                                                           width: 1.h),
                                                       borderRadius:
-                                                          BorderRadiusStyle
-                                                              .roundedBorder8),
+                                                      BorderRadiusStyle
+                                                          .roundedBorder8),
                                                   child: Container(
                                                       height: 116.v,
                                                       width: 119.h,
                                                       padding:
-                                                          EdgeInsets.symmetric(
-                                                              horizontal: 11.h,
-                                                              vertical: 7.v),
+                                                      EdgeInsets.symmetric(
+                                                          horizontal: 11.h,
+                                                          vertical: 7.v),
                                                       decoration: AppDecoration
                                                           .outlinePurple
                                                           .copyWith(
-                                                              borderRadius:
-                                                                  BorderRadiusStyle
-                                                                      .roundedBorder8),
+                                                          borderRadius:
+                                                          BorderRadiusStyle
+                                                              .roundedBorder8),
                                                       child: Stack(
                                                           alignment: Alignment
                                                               .topCenter,
@@ -192,36 +193,36 @@ class HomeScreenPage extends StatelessWidget {
                                                             Align(
                                                                 alignment: Alignment
                                                                     .bottomCenter,
-                                                          child: GestureDetector(
-                                                              onTap: () {
-                                                                onTapContact(context);
-                                                              },
-                                                                child: Container(
-                                                                    width: 95.h,
-                                                                    margin: EdgeInsets.only(
-                                                                        bottom: 4
-                                                                            .v),
-                                                                    child: Text(
-                                                                        "Contact Professional",
-                                                                        maxLines:
+                                                                child: GestureDetector(
+                                                                    onTap: () {
+                                                                      onTapContact(context);
+                                                                    },
+                                                                    child: Container(
+                                                                        width: 95.h,
+                                                                        margin: EdgeInsets.only(
+                                                                            bottom: 4
+                                                                                .v),
+                                                                        child: Text(
+                                                                            "Contact Professional",
+                                                                            maxLines:
                                                                             2,
-                                                                        overflow:
+                                                                            overflow:
                                                                             TextOverflow
                                                                                 .ellipsis,
-                                                                        textAlign:
+                                                                            textAlign:
                                                                             TextAlign
                                                                                 .center,
-                                                                        style: CustomTextStyles
-                                                                            .titleMediumOnErrorContainer)))),
+                                                                            style: CustomTextStyles
+                                                                                .titleMediumOnErrorContainer)))),
                                                             CustomImageView(
                                                                 svgPath:
-                                                                    ImageConstant
-                                                                        .imgComputer,
+                                                                ImageConstant
+                                                                    .imgComputer,
                                                                 height: 67.v,
                                                                 width: 63.h,
                                                                 alignment:
-                                                                    Alignment
-                                                                        .topCenter)
+                                                                Alignment
+                                                                    .topCenter)
                                                           ])))),
                                           Align(
                                               alignment: Alignment.bottomRight,
@@ -232,20 +233,20 @@ class HomeScreenPage extends StatelessWidget {
                                                   decoration: AppDecoration
                                                       .outlinePurple
                                                       .copyWith(
-                                                          borderRadius:
-                                                              BorderRadiusStyle
-                                                                  .roundedBorder8),
+                                                      borderRadius:
+                                                      BorderRadiusStyle
+                                                          .roundedBorder8),
                                                   child: Column(
                                                       mainAxisSize:
-                                                          MainAxisSize.min,
+                                                      MainAxisSize.min,
                                                       mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .center,
+                                                      MainAxisAlignment
+                                                          .center,
                                                       children: [
                                                         CustomImageView(
                                                             svgPath:
-                                                                ImageConstant
-                                                                    .imgInfo,
+                                                            ImageConstant
+                                                                .imgInfo,
                                                             height: 68.v,
                                                             width: 64.h),
                                                         SizedBox(height: 11.v),
@@ -269,38 +270,41 @@ class HomeScreenPage extends StatelessWidget {
                                                   },
                                                   child: Container(
                                                       padding:
-                                                          EdgeInsets.symmetric(
-                                                              horizontal: 12.h,
-                                                              vertical: 10.v),
+                                                      EdgeInsets.symmetric(
+                                                          horizontal: 22.h,
+                                                          vertical: 10.v),
                                                       decoration: AppDecoration
                                                           .outlinePurple
                                                           .copyWith(
-                                                              borderRadius:
-                                                                  BorderRadiusStyle
-                                                                      .roundedBorder8),
+                                                          borderRadius:
+                                                          BorderRadiusStyle
+                                                              .roundedBorder8),
                                                       child: Column(
                                                           mainAxisSize:
-                                                              MainAxisSize.min,
+                                                          MainAxisSize.min,
                                                           crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .end,
+                                                          CrossAxisAlignment
+                                                              .end,
                                                           mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .center,
+                                                          MainAxisAlignment
+                                                              .center,
                                                           children: [
                                                             CustomImageView(
                                                                 svgPath:
-                                                                    ImageConstant
-                                                                        .imgFile,
+                                                                ImageConstant
+                                                                    .imgFile,
                                                                 height: 59.v,
                                                                 width: 61.h,
                                                                 margin: EdgeInsets
                                                                     .only(
-                                                                        right: 12
-                                                                            .h)),
+                                                                    right: 5
+                                                                        .h)),
                                                             SizedBox(
-                                                                height: 15.v),
+                                                                height: 0.v),
                                                             Text("Safety Plan",
+                                                                textAlign:
+                                                                TextAlign
+                                                                    .center,
                                                                 style: CustomTextStyles
                                                                     .titleMediumOnErrorContainer)
                                                           ])))),
@@ -310,44 +314,45 @@ class HomeScreenPage extends StatelessWidget {
                                                   onTap: () {
                                                     onTapDocAbuse(context);
                                                   },
-                                              child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      horizontal: 16.h,
-                                                      vertical: 5.v),
-                                                  decoration: AppDecoration
-                                                      .outlinePurple
-                                                      .copyWith(
+                                                  child: Container(
+                                                      padding: EdgeInsets.symmetric(
+                                                          horizontal: 16.h,
+                                                          vertical: 5.v),
+                                                      decoration: AppDecoration
+                                                          .outlinePurple
+                                                          .copyWith(
                                                           borderRadius:
-                                                              BorderRadiusStyle
-                                                                  .roundedBorder8),
-                                                  child: Column(
-                                                      mainAxisSize:
+                                                          BorderRadiusStyle
+                                                              .roundedBorder8),
+                                                      child: Column(
+                                                          mainAxisSize:
                                                           MainAxisSize.min,
-                                                      mainAxisAlignment:
+                                                          mainAxisAlignment:
                                                           MainAxisAlignment
                                                               .center,
-                                                      children: [
-                                                        SizedBox(height: 2.v),
-                                                        CustomImageView(
-                                                            svgPath:
+                                                          children: [
+                                                            SizedBox(height: 2.v),
+                                                            CustomImageView(
+                                                                svgPath:
                                                                 ImageConstant
                                                                     .imgE1421,
-                                                            height: 69.v,
-                                                            width: 61.h),
-                                                        SizedBox(
-                                                            width: 81.h,
-                                                            child: Text(
-                                                                "Document Abuse",
-                                                                maxLines: 2,
-                                                                overflow:
+                                                                height: 69.v,
+                                                                width: 61.h),
+                                                            SizedBox(
+                                                                height: 32.v,
+                                                                width: 81.h,
+                                                                child: Text(
+                                                                    "Document Abuse",
+                                                                    maxLines: 2,
+                                                                    overflow:
                                                                     TextOverflow
                                                                         .ellipsis,
-                                                                textAlign:
+                                                                    textAlign:
                                                                     TextAlign
                                                                         .center,
-                                                                style: CustomTextStyles
-                                                                    .titleMediumOnErrorContainer))
-                                                      ]))))
+                                                                    style: CustomTextStyles
+                                                                        .titleMediumOnErrorContainer))
+                                                          ]))))
                                         ]))
                               ])
                         ]))))));
@@ -380,7 +385,7 @@ class HomeScreenPage extends StatelessWidget {
   }
 
   onTapDocAbuse(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => DocumentAbuseAddANewRecordScreen()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => DocumentAbuseTwoScreen()));
   }
 
   onTapMood(BuildContext context) {

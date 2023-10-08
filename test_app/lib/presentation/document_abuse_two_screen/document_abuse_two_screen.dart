@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_app/core/app_export.dart';
 import 'package:test_app/widgets/custom_elevated_button.dart';
 import 'package:test_app/widgets/custom_outlined_button.dart';
+import 'package:test_app/presentation/document_abuse_add_a_new_record_screen/document_abuse_add_a_new_record_screen.dart';
 
 class DocumentAbuseTwoScreen extends StatelessWidget {
   const DocumentAbuseTwoScreen({Key? key}) : super(key: key);
@@ -25,13 +26,13 @@ class DocumentAbuseTwoScreen extends StatelessWidget {
                           EdgeInsets.symmetric(horizontal: 7.h, vertical: 11.v),
                       decoration: AppDecoration.fillGray,
                       child: Row(children: [
-                        CustomImageView(
-                            svgPath: ImageConstant.imgArrowleftErrorcontainer,
-                            height: 12.v,
-                            width: 6.h,
-                            onTap: () {
-                              onTapImgArrowleftone(context);
-                            }),
+                        // CustomImageView(
+                        //     svgPath: ImageConstant.imgArrowleftErrorcontainer,
+                        //     height: 12.v,
+                        //     width: 6.h,
+                        //     onTap: () {
+                        //       onTapImgArrowleftone(context);
+                        //     }),
                         Padding(
                             padding: EdgeInsets.only(
                                 left: 89.h, top: 5.v, bottom: 5.v),
@@ -85,7 +86,11 @@ class DocumentAbuseTwoScreen extends StatelessWidget {
                               style: CustomTextStyles
                                   .titleMediumOnPrimaryContainer_1))),
                   CustomElevatedButton(
+
                       text: "Add new record",
+                      onTap: () {
+                        onTapImgArrowleftone(context);
+                      },
                       margin:
                           EdgeInsets.only(left: 24.h, top: 57.v, right: 24.h),
                       rightIcon: Container(
@@ -107,6 +112,6 @@ class DocumentAbuseTwoScreen extends StatelessWidget {
   /// This function takes a [BuildContext] object as a parameter, which is used
   /// to navigate back to the previous screen.
   onTapImgArrowleftone(BuildContext context) {
-    Navigator.pop(context);
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => DocumentAbuseAddANewRecordScreen()));
   }
 }
