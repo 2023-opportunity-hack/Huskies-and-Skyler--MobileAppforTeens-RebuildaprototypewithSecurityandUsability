@@ -3,6 +3,8 @@ import 'package:test_app/tictactoe.dart';
 import 'package:test_app/Firstpage.dart';
 import 'package:test_app/Secondpage.dart';
 import 'package:test_app/home_temp.dart';
+import 'package:test_app/presentation/mood_tracker_screen/mood_tracker_screen.dart';
+
 
 
 
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/second': (context) => Secondpage(),
         '/tictactoe': (context) => Tictactoe(),
         '/home_temp': (context) => Hometemp(),
+        '/mood_tracker_screen': (context) => MoodTrackerScreen(),
       },
       title: 'main page for safespace',
       theme: ThemeData(
