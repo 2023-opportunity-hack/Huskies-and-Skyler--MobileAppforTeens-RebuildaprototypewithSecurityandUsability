@@ -4,8 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:test_app/utils.dart';
 
 
-
-
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([

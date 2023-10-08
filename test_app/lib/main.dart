@@ -65,9 +65,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.white, padding: EdgeInsets.symmetric(
-                    horizontal: 25.0, // Adjust horizontal padding as needed
-                    vertical: 10.0,   // Adjust vertical padding as needed
-                  ),
+                  horizontal: 25.0, // Adjust horizontal padding as needed
+                  vertical: 10.0,   // Adjust vertical padding as needed
+                ),
                   backgroundColor: Colors.red,
                 ),
                 child: Text(

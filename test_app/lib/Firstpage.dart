@@ -55,4 +55,3 @@ class _FirstpageState extends State<Firstpage> {
     ); // This trailing comma makes auto-formatting nicer for build methods.
   }
 }
-
