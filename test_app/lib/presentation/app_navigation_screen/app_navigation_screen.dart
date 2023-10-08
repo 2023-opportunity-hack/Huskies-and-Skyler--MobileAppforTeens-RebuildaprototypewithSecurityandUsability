@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/core/app_export.dart';
+import 'package:test_app/presentation/mood_tracker_screen/mood_tracker_screen.dart';
 
 class AppNavigationScreen extends StatelessWidget {
   const AppNavigationScreen({Key? key}) : super(key: key);
@@ -277,7 +278,7 @@ class AppNavigationScreen extends StatelessWidget {
                                         ]))),
                                 GestureDetector(
                                     onTap: () {
-                                      onTapMoodtracker(context);
+                                      Navigator.pushNamed(context,'/mood_tracker_screen.dart');
                                     },
                                     child: Container(
                                         decoration: AppDecoration.fillWhiteA,
