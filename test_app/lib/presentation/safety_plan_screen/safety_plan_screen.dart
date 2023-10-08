@@ -3,12 +3,17 @@ import 'package:test_app/core/app_export.dart';
 import 'package:test_app/presentation/home_screen_page/home_screen_page.dart';
 import 'package:test_app/widgets/custom_bottom_bar.dart';
 
-class SafetyPlanScreen extends StatelessWidget {
+class SafetyPlanScreen extends StatefulWidget {
   SafetyPlanScreen({Key? key})
       : super(
           key: key,
         );
 
+  @override
+  State<SafetyPlanScreen> createState() => _SafetyPlanScreenState();
+}
+
+class _SafetyPlanScreenState extends State<SafetyPlanScreen> {
   GlobalKey<NavigatorState> navigatorKey = GlobalKey();
 
   @override
@@ -243,7 +248,7 @@ class SafetyPlanScreen extends StatelessWidget {
                             child: SizedBox(
                               width: double.maxFinite,
                               child: Text(
-                                "\ndadlsiufhpw;9u8ehrfpw98uohef",
+                                "",
                                 maxLines: null,
                                 overflow: TextOverflow.ellipsis,
                                 style: CustomTextStyles
@@ -406,12 +411,7 @@ class SafetyPlanScreen extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: CustomBottomBar(
-          onChanged: (BottomBarEnum type) {
-            Navigator.pushNamed(
-                navigatorKey.currentContext!, getCurrentRoute(type));
-          },
-        ),
+
       ),
     );
   }

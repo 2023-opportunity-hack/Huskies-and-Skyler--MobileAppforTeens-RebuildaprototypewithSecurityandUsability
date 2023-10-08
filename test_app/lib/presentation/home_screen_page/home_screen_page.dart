@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:test_app/core/app_export.dart';
 import 'package:test_app/widgets/app_bar/appbar_image.dart';
 import 'package:test_app/widgets/app_bar/custom_app_bar.dart';
+import 'package:test_app/presentation/warning_signs_one_screen/warning_signs_one_screen.dart';
+import 'package:test_app/presentation/safety_plan_screen/safety_plan_screen.dart';
+import 'package:test_app/presentation/self_care_screen/self_care_screen.dart';
+import 'package:test_app/presentation/contact_a_professional_screen/contact_a_professional_screen.dart';
+import 'package:test_app/presentation/document_abuse_add_a_new_record_screen/document_abuse_add_a_new_record_screen.dart';
+import 'package:test_app/presentation/mood_tracker_screen/mood_tracker_screen.dart';
+
+
 
 class HomeScreenPage extends StatelessWidget {
   const HomeScreenPage({Key? key}) : super(key: key);
@@ -68,35 +76,39 @@ class HomeScreenPage extends StatelessWidget {
                                         children: [
                                           Align(
                                               alignment: Alignment.topRight,
-                                              child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      horizontal: 24.h,
-                                                      vertical: 11.v),
-                                                  decoration: AppDecoration
-                                                      .outlinePurple
-                                                      .copyWith(
-                                                          borderRadius:
-                                                              BorderRadiusStyle
-                                                                  .roundedBorder8),
-                                                  child: Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.min,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .center,
-                                                      children: [
-                                                        CustomImageView(
-                                                            svgPath:
-                                                                ImageConstant
-                                                                    .imgCut,
-                                                            height: 60.v,
-                                                            width: 64.h),
-                                                        SizedBox(height: 13.v),
-                                                        Text("Self Care",
-                                                            style: CustomTextStyles
-                                                                .titleMediumOnErrorContainer),
-                                                        SizedBox(height: 2.v)
-                                                      ]))),
+                                              child: GestureDetector(
+                                                  onTap: () {
+                                                    onTapSelfCare(context);
+                                                  },
+                                                    child: Container(
+                                                        padding: EdgeInsets.symmetric(
+                                                            horizontal: 24.h,
+                                                            vertical: 11.v),
+                                                        decoration: AppDecoration
+                                                            .outlinePurple
+                                                            .copyWith(
+                                                                borderRadius:
+                                                                    BorderRadiusStyle
+                                                                        .roundedBorder8),
+                                                        child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize.min,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .center,
+                                                            children: [
+                                                              CustomImageView(
+                                                                  svgPath:
+                                                                      ImageConstant
+                                                                          .imgCut,
+                                                                  height: 60.v,
+                                                                  width: 64.h),
+                                                              SizedBox(height: 13.v),
+                                                              Text("Self Care",
+                                                                  style: CustomTextStyles
+                                                                      .titleMediumOnErrorContainer),
+                                                              SizedBox(height: 2.v)
+                                                            ])))),
                                           Align(
                                               alignment: Alignment.topLeft,
                                               child: GestureDetector(
@@ -180,6 +192,10 @@ class HomeScreenPage extends StatelessWidget {
                                                             Align(
                                                                 alignment: Alignment
                                                                     .bottomCenter,
+                                                          child: GestureDetector(
+                                                              onTap: () {
+                                                                onTapContact(context);
+                                                              },
                                                                 child: Container(
                                                                     width: 95.h,
                                                                     margin: EdgeInsets.only(
@@ -196,7 +212,7 @@ class HomeScreenPage extends StatelessWidget {
                                                                             TextAlign
                                                                                 .center,
                                                                         style: CustomTextStyles
-                                                                            .titleMediumOnErrorContainer))),
+                                                                            .titleMediumOnErrorContainer)))),
                                                             CustomImageView(
                                                                 svgPath:
                                                                     ImageConstant
@@ -290,6 +306,10 @@ class HomeScreenPage extends StatelessWidget {
                                                           ])))),
                                           Align(
                                               alignment: Alignment.bottomCenter,
+                                              child: GestureDetector(
+                                                  onTap: () {
+                                                    onTapDocAbuse(context);
+                                                  },
                                               child: Container(
                                                   padding: EdgeInsets.symmetric(
                                                       horizontal: 16.h,
@@ -327,7 +347,7 @@ class HomeScreenPage extends StatelessWidget {
                                                                         .center,
                                                                 style: CustomTextStyles
                                                                     .titleMediumOnErrorContainer))
-                                                      ])))
+                                                      ]))))
                                         ]))
                               ])
                         ]))))));
@@ -339,7 +359,7 @@ class HomeScreenPage extends StatelessWidget {
   /// When the action is triggered, this function uses the [Navigator] widget
   /// to push the named route for the warningSignsOneScreen.
   onTapWarningsigns(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.warningSignsOneScreen);
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => WarningSignsOneScreen()));
   }
 
   /// Navigates to the safetyPlanScreen when the action is triggered.
@@ -348,6 +368,23 @@ class HomeScreenPage extends StatelessWidget {
   /// When the action is triggered, this function uses the [Navigator] widget
   /// to push the named route for the safetyPlanScreen.
   onTapSafetyplan(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.safetyPlanScreen);
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SafetyPlanScreen()));
+  }
+
+  onTapSelfCare(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SelfCareScreen()));
+  }
+
+  onTapContact(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ContactAProfessionalScreen()));
+  }
+
+  onTapDocAbuse(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => DocumentAbuseAddANewRecordScreen()));
+  }
+
+  onTapMood(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => MoodTrackerScreen()));
   }
 }
+

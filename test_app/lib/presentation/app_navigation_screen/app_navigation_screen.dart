@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/core/app_export.dart';
-import 'package:test_app/presentation/mood_tracker_screen/mood_tracker_screen.dart';
 
 class AppNavigationScreen extends StatelessWidget {
   const AppNavigationScreen({Key? key}) : super(key: key);
@@ -70,7 +69,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                   child: Text(
                                                       "Home Screen - Container",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -102,7 +101,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                   child: Text(
                                                       "warning signs One",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -133,7 +132,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                       vertical: 10.v),
                                                   child: Text("Self Care",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -164,7 +163,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                       vertical: 10.v),
                                                   child: Text("safety plan",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -196,7 +195,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                   child: Text(
                                                       "self care - my strategies (choose)",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -228,7 +227,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                   child: Text(
                                                       "self care - resources",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -260,7 +259,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                   child: Text(
                                                       "self care - gratitude journal",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -291,7 +290,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                       vertical: 10.v),
                                                   child: Text("Mood tracker",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -323,7 +322,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                   child: Text(
                                                       "Contact a Professional",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -355,7 +354,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                   child: Text(
                                                       "document abuse Two",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -387,7 +386,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                   child: Text(
                                                       "document abuse - add a new record",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
@@ -420,7 +419,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                   child: Text(
                                                       "document abuse - add supporting evidence - Tab Container",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                           color: theme
                                                               .colorScheme
