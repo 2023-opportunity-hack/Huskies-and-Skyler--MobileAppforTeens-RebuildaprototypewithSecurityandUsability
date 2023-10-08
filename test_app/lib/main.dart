@@ -86,16 +86,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.pushNamed(context, '/first');
                 },
                 style: TextButton.styleFrom(
-                  foregroundColor: Colors.white, padding: EdgeInsets.symmetric(
-                    horizontal: 55.0, // Adjust horizontal padding as needed
-                    vertical: 20.0,   // Adjust vertical padding as needed
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100),
                   ),
-                  backgroundColor: Colors.deepPurple,
+                  foregroundColor: Colors.white, padding: EdgeInsets.symmetric(
+                    horizontal: 150.0, // Adjust horizontal padding as needed
+                    vertical: 15,   // Adjust vertical padding as needed
+                  ),
+                  backgroundColor: Color(0xFF683d7d),
                 ),
                 child: Text(
-                  "Begin",
+                  "Enter ➩",
                   style: TextStyle(
-                    fontSize: 30.0,
+                    fontSize: 18.0,
                     fontFamily: "Times New Roman",
                     fontWeight: FontWeight.w400,
                   ),

@@ -9,18 +9,29 @@ class _FirstpageState extends State<Firstpage> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: Text("How to Login"),
       ),
       body: Container(
+
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                'assets/safespacebg.png'
+            ),
+            fit: BoxFit.fill,
+          ), // Decoration Image
+        ),
+
+
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             new Align(alignment: Alignment.center),
-            Image.asset('assets/safespacebg.png'),
             new Text(
                 'How it Works',
                 textAlign: TextAlign.center,
@@ -61,6 +72,9 @@ class _FirstpageState extends State<Firstpage> {
                   Navigator.pushNamed(context, '/tictactoe');
                 },
                 style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
                   foregroundColor: Colors.white, padding: EdgeInsets.symmetric(
                   horizontal: 25.0, // Adjust horizontal padding as needed
                   vertical: 10.0, // Adjust vertical padding as needed
@@ -68,7 +82,7 @@ class _FirstpageState extends State<Firstpage> {
                   backgroundColor: Color(0xFF683d7d),
                 ),
                 child: Text(
-                  "Enter ➩",
+                  "Continue ➩",
                   style: TextStyle(
                     fontSize: 30.0,
                     fontFamily: "Plus Jakarta Sans",
