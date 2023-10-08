@@ -3,6 +3,8 @@ import 'package:test_app/tictactoe.dart';
 import 'package:test_app/Firstpage.dart';
 import 'package:test_app/Secondpage.dart';
 import 'package:test_app/home_temp.dart';
+import 'package:test_app/presentation/mood_tracker_screen/mood_tracker_screen.dart';
+
 
 
 
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/second': (context) => Secondpage(),
         '/tictactoe': (context) => Tictactoe(),
         '/home_temp': (context) => Hometemp(),
+        '/mood_tracker_screen': (context) => MoodTrackerScreen(),
       },
       title: 'main page for safespace',
       theme: ThemeData(
@@ -41,22 +44,44 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         title: Text("Safe Space"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Welcome to Safe Space',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 30.0,
-                fontFamily: "Tahoma",
-                fontWeight: FontWeight.w600,
-              ),
+      body: Container(
+
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                'assets/safespacebgv2.png'
             ),
+            fit: BoxFit.fill,
+          ), // Decoration Image
+        ),
+
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.end,
+
+
+          children: <Widget>[
+
+            new Align(alignment: Alignment.center),
+
+            // Text(
+            //   'Welcome to Safe Space',
+            //   textAlign: TextAlign.center,
+            //   style: TextStyle(
+            //     fontSize: 30.0,
+            //     fontFamily: "Tahoma",
+            //     fontWeight: FontWeight.w600,
+            //   ),
+            // ),
+
+
             Padding(
               padding: EdgeInsets.all(10.0), // Add outer padding
               child: TextButton(
@@ -65,13 +90,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.white, padding: EdgeInsets.symmetric(
-                    horizontal: 25.0, // Adjust horizontal padding as needed
-                    vertical: 10.0,   // Adjust vertical padding as needed
-                  ),
-                  backgroundColor: Colors.red,
+                  horizontal: 55.0, // Adjust horizontal padding as needed
+                  vertical: 20.0,   // Adjust vertical padding as needed
+                ),
+                  backgroundColor: Colors.deepPurple,
                 ),
                 child: Text(
-                  "First Screen",
+                  "Begin",
                   style: TextStyle(
                     fontSize: 30.0,
                     fontFamily: "Times New Roman",
@@ -80,7 +105,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-
+            new Text('',),
+            new Text('',),
+            new Text('',),
           ],
         ),
       ),
@@ -91,24 +118,3 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 //
-// class BaseLayout extends StatelessWidget{
-//   @override
-//   Widget build(BuildContext context){
-//     return Scaffold(
-//       body: Container(
-//         decoration: BoxDecoration(
-//           image: DecorationImage(
-//             image: AssetImage("assets/safespacebg.png"),
-//             fit: BoxFit.cover,
-//           ),
-//         ),
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.start,
-//           children: [
-//             // Add other widgets here
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
