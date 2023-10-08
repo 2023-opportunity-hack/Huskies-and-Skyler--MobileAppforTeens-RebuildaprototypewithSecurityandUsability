@@ -71,15 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             new Align(alignment: Alignment.center),
 
-            // Text(
-            //   'Welcome to Safe Space',
-            //   textAlign: TextAlign.center,
-            //   style: TextStyle(
-            //     fontSize: 30.0,
-            //     fontFamily: "Tahoma",
-            //     fontWeight: FontWeight.w600,
-            //   ),
-            // ),
+
 
 
             Padding(
