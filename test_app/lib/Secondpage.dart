@@ -13,7 +13,6 @@ class _SecondpageState extends State<Secondpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         title: Text("Navigations"),
       ),
       body: Center(
@@ -30,21 +29,20 @@ class _SecondpageState extends State<Secondpage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0), // Add outer padding
               child: TextButton(
-                onPressed: (){
-                  Navigator.pop(context);
+                onPressed: () {
+                  Navigator.pushNamed(context, '/tictactoe');
                 },
                 style: TextButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 20.0, // Adjust horizontal padding as needed
-                    vertical: 15.0,   // Adjust vertical padding as needed
-                  ),
+                  foregroundColor: Colors.white, padding: EdgeInsets.symmetric(
+                  horizontal: 25.0, // Adjust horizontal padding as needed
+                  vertical: 10.0,   // Adjust vertical padding as needed
+                ),
                   backgroundColor: Colors.red,
-                  primary: Colors.white,
                 ),
                 child: Text(
-                  "Home Screen",
+                  "Tic Tac Toe",
                   style: TextStyle(
                     fontSize: 30.0,
                     fontFamily: "Times New Roman",

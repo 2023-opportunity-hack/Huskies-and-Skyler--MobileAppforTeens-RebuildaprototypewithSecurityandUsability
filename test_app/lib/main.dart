@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'Firstpage.dart';
-import 'Secondpage.dart';
+import 'package:test_app/tictactoe.dart';
+import 'package:test_app/Firstpage.dart';
+import 'package:test_app/Secondpage.dart';
+
+
 void main() {
   runApp(MyApp());
 }
@@ -13,6 +16,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/first': (context) => Firstpage(),
         '/second': (context) => Secondpage(),
+        '/tictactoe': (context) => Tictactoe(),
       },
       title: 'main page for safespace',
       theme: ThemeData(
@@ -57,12 +61,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.pushNamed(context, '/first');
                 },
                 style: TextButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
+                  foregroundColor: Colors.white, padding: EdgeInsets.symmetric(
                     horizontal: 25.0, // Adjust horizontal padding as needed
                     vertical: 10.0,   // Adjust vertical padding as needed
                   ),
                   backgroundColor: Colors.red,
-                  primary: Colors.white,
                 ),
                 child: Text(
                   "First Screen",
@@ -74,30 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.all(10.0), // Add outer padding
-              child: TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/second');
-                },
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 25.0, // Adjust horizontal padding as needed
-                    vertical: 10.0,   // Adjust vertical padding as needed
-                  ),
-                  backgroundColor: Colors.red,
-                  primary: Colors.white,
-                ),
-                child: Text(
-                  "Second Screen",
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontFamily: "Times New Roman",
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ),
-            )
+
           ],
         ),
       ),
@@ -105,3 +85,27 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
 }
+
+
+//
+// class BaseLayout extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context){
+//     return Scaffold(
+//       body: Container(
+//         decoration: BoxDecoration(
+//           image: DecorationImage(
+//             image: AssetImage("assets/safespacebg.png"),
+//             fit: BoxFit.cover,
+//           ),
+//         ),
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.start,
+//           children: [
+//             // Add other widgets here
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }

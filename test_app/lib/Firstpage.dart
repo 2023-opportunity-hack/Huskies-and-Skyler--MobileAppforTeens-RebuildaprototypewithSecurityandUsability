@@ -27,21 +27,20 @@ class _FirstpageState extends State<Firstpage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(10.0),
-              child: ElevatedButton(
+              padding: EdgeInsets.all(10.0), // Add outer padding
+              child: TextButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/second');
                 },
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 25.0, // Adjust horizontal padding as needed
-                    vertical: 10.0,   // Adjust vertical padding as needed
-                  ),
-                  primary: Colors.red,
-                  onPrimary: Colors.white,
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.white, padding: EdgeInsets.symmetric(
+                  horizontal: 25.0, // Adjust horizontal padding as needed
+                  vertical: 10.0,   // Adjust vertical padding as needed
+                ),
+                  backgroundColor: Colors.red,
                 ),
                 child: Text(
-                  "Home Screen",
+                  "Second Screen",
                   style: TextStyle(
                     fontSize: 30.0,
                     fontFamily: "Times New Roman",
