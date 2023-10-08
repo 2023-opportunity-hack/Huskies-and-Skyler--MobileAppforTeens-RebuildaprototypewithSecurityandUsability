@@ -7,11 +7,7 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/test_app/build" />
-      <excludeFolder url="file://$MODULE_DIR$/test_app/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/test_app/.pub" />
-    </content>
+    <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Android API 33, extension level 4 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
