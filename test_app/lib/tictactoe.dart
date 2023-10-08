@@ -80,9 +80,9 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
     backgroundColor: getBackgroundColor(),
-    appBar: AppBar(
-      title: Text(widget.title),
-    ),
+    // appBar: AppBar(
+    //   title: Text(widget.title),
+    // ),
     body: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: Utils.modelBuilder(matrix, (x, value) => buildRow(x)),
@@ -104,11 +104,11 @@ class _MainPageState extends State<MainPage> {
   Color getFieldColor(String value) {
     switch (value) {
       case Player.O:
-        return Colors.blue;
+        return Color(0xffb39ebe);
       case Player.X:
-        return Colors.red;
+        return Color(0xffa9e2df);
       default:
-        return Colors.white;
+        return Color(0xffffffff);
     }
   }
 

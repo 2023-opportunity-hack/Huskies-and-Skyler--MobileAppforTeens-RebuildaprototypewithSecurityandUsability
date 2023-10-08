@@ -45,9 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(
-        title: Text("Safe Space"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Safe Space"),
+      // ),
       body: Container(
 
         decoration: const BoxDecoration(
@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   "Enter ➩",
                   style: TextStyle(
                     fontSize: 18.0,
-                    fontFamily: "Times New Roman",
+                    fontFamily: "Plus Jakarta Sans",
                     fontWeight: FontWeight.w400,
                   ),
                 ),
