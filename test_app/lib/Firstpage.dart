@@ -11,9 +11,9 @@ class _FirstpageState extends State<Firstpage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("How to Login"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("How to Login"),
+      // ),
       body: Container(
 
         decoration: const BoxDecoration(
@@ -32,39 +32,39 @@ class _FirstpageState extends State<Firstpage> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             new Align(alignment: Alignment.center),
-            new Text(
-                'How it Works',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 40.0,
-                  fontFamily: "Plus Jakarta Sans",
-                  fontWeight: FontWeight.w600,
-                )
-            ),
-            new Text('',),
-            new Text('',),
-            new Text(
-                '•The app is disguised as a game of Tic Tac Toe to offer a layer of confidentiality and protection.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 25.0,
-                  fontFamily: "Plus Jakarta Sans",
-                  fontWeight: FontWeight.w200,
-                )
-            ),
-            new Text('',),
-            new Text(
-                '•Tapping any marked square three times in a row to login.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: "Plus Jakarta Sans",
-                  fontWeight: FontWeight.w200,
-                )
-            ),
-            new Text('',),
-            new Text('',),
-            new Text('',),
+            // new Text(
+            //     'How it Works',
+            //     textAlign: TextAlign.center,
+            //     style: TextStyle(
+            //       fontSize: 40.0,
+            //       fontFamily: "Plus Jakarta Sans",
+            //       fontWeight: FontWeight.w600,
+            //     )
+            // ),
+            // new Text('',),
+            // new Text('',),
+            // new Text(
+            //     '•The app is disguised as a game of Tic Tac Toe to offer a layer of confidentiality and protection.',
+            //     textAlign: TextAlign.center,
+            //     style: TextStyle(
+            //       fontSize: 25.0,
+            //       fontFamily: "Plus Jakarta Sans",
+            //       fontWeight: FontWeight.w200,
+            //     )
+            // ),
+            // new Text('',),
+            // new Text(
+            //     '•Tapping any marked square three times in a row to login.',
+            //     textAlign: TextAlign.center,
+            //     style: TextStyle(
+            //       fontSize: 25,
+            //       fontFamily: "Plus Jakarta Sans",
+            //       fontWeight: FontWeight.w200,
+            //     )
+            // ),
+            // new Text('',),
+            // new Text('',),
+            // new Text('',),
             Padding(
               padding: EdgeInsets.all(10.0), // Add outer padding
               child: TextButton(
@@ -76,22 +76,21 @@ class _FirstpageState extends State<Firstpage> {
                     borderRadius: BorderRadius.circular(100),
                   ),
                   foregroundColor: Colors.white, padding: EdgeInsets.symmetric(
-                  horizontal: 25.0, // Adjust horizontal padding as needed
-                  vertical: 10.0, // Adjust vertical padding as needed
+                  horizontal: 150, // Adjust horizontal padding as needed
+                  vertical: 15.0, // Adjust vertical padding as needed
                 ),
                   backgroundColor: Color(0xFF683d7d),
                 ),
                 child: Text(
                   "Continue ➩",
                   style: TextStyle(
-                    fontSize: 30.0,
+                    fontSize: 18.0,
                     fontFamily: "Plus Jakarta Sans",
                     fontWeight: FontWeight.w200,
                   ),
                 ),
               ),
             ),
-            new Text('',),
             new Text('',),
             new Text('',),
             new Text('',),
